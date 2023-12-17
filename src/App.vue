@@ -1,23 +1,24 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router'
+import ContentList from './components/ContentList.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/images/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it Miko!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
   </header>
+  <aside>
+    <div class="wrappr" style="border: 1px solid red">
+      <ContentList />
+    </div>    
+  </aside>
+  <main style="border: 1px solid red">
+    <RouterView />
+  </main>
+  <footer>
 
-  <RouterView />
+  </footer>
+
 </template>
 
 <style src="./assets/styles/app.scss" scoped lang="scss" />
